@@ -47,7 +47,8 @@ def case(i):
 
 def home(response):
     a=[response.POST['os'],response.POST['al'],response.POST['pc'], response.POST['sw'], response.POST['cn'], response.POST['ec'], response.POST['coa'], response.POST['mt'], response.POST['cs'], response.POST['hr'], response.POST['lq'], response.POST['hack'], response.POST['csr'], response.POST['psp'], response.POST['cw'], response.POST['cl'], response.POST['ex']]
-    model = pickle.load(open(r"ml\predictionsmodel.sav", "rb"))
+    model = pickle.load(open(r"ml/predictionsmodel.sav", "rb"))
+    c = [int(i) for i in a]
     predictedJob = model.predict([a])
     import math
     y = predictedJob[0]
