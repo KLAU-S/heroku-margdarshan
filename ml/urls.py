@@ -13,5 +13,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('enayat/', views.index, name='index'),
-    path('result', views.home, name='home'),
+    path('result/', views.home, name='home'),
 ]
